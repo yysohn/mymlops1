@@ -1,1 +1,35 @@
+# --- Python 관련 ---
+__pycache__/
+*.py[cod]
+*$py.class
 venv/
+.venv/
+env/
+.env
+
+# --- MLflow 관련 ---
+# 로컬 실험 기록 및 모델 저장소 (서버를 사용한다면 로컬 데이터는 올리지 않음)
+mlruns/
+mlruns.db
+artifacts/
+model/
+MLflow.db
+mlartifacts
+
+# --- DVC 관련 ---
+# DVC가 관리하는 실제 데이터 본체 (dvc add 시 자동 추가되지만 명시적 확인용)
+ 
+# DVC 내부 캐시 및 로컬 설정
+.dvc/cache
+.dvc/tmp
+.dvc/config.local
+
+# --- IDE 및 시스템 관련 ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- 데이터 및 로그 ---
+*.log
+!data/*.dvc  # 중요: .dvc 파일은 절대 제외하면 안 됨 (!)
